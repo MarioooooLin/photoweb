@@ -1,15 +1,6 @@
-import React from "react";
-import axios from "axios";
+import React, { useState } from "react";
 
-const Search = () => {
-    const auth = "Iqz4BuHjkhq0HICMhlQqAaXO1TRcF0AlueA4mFQwv5UHzcpJM9PojfV6";
-    const initURL = "https://api.pexels.com/v1/curated?page=1&per_page=15";
-
-    const search = async () => {
-        let result = await axios.get(initURL, { headers: { Authorization: auth } });
-        console.log(result);
-    };
-
+const Search = ({ search }) => {
     return (
         <div className='search'>
             <input className='input' type='text' />
